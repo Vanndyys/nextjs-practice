@@ -1,0 +1,240 @@
+.wrap {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: clamp(2.5rem, 6vw, 5.5rem) 1.5rem 4rem;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+  padding-bottom: clamp(2.5rem, 5vw, 3.5rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.kicker {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+
+.name {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-weight: 500;
+  font-size: clamp(2.4rem, 6vw, 3.4rem);
+  line-height: 1.08;
+  margin: 0 0 1rem;
+  color: var(--ink);
+}
+
+.tagline {
+  font-size: clamp(1.05rem, 2.2vw, 1.2rem);
+  line-height: 1.6;
+  color: var(--ink-soft);
+  max-width: 44ch;
+  margin: 0 0 2rem;
+}
+
+.contactRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0;
+  margin: 0 0 1.75rem;
+  padding: 0;
+  list-style: none;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.contactRow li {
+  padding: 0 1rem;
+  border-left: 1px solid var(--line);
+}
+
+.contactRow li:first-child {
+  padding-left: 0;
+  border-left: none;
+}
+
+.contactRow a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contactRow a:hover {
+  color: var(--ink);
+}
+
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.ctaPrimary,
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 0.7rem 1.3rem;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.ctaPrimary {
+  background: var(--ink);
+  color: var(--paper);
+  border: 1px solid var(--ink);
+}
+
+.ctaPrimary:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.ctaSecondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--line);
+}
+
+.ctaSecondary:hover {
+  border-color: var(--ink);
+}
+
+/* ---------- Sections ---------- */
+
+.section {
+  padding: clamp(2.25rem, 5vw, 3rem) 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.section:last-of-type {
+  border-bottom: none;
+}
+
+.sectionTitle {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: var(--ink);
+  margin: 0 0 1.25rem;
+}
+
+.about {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--ink-soft);
+  max-width: 60ch;
+}
+
+/* ---------- Entry rows (education / experience) ---------- */
+
+.entry + .entry {
+  margin-top: 1.75rem;
+}
+
+.entryHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.entryTitle {
+  font-weight: 600;
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.entryDate {
+  font-size: 0.9rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.entrySub {
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 0.2rem 0 0.6rem;
+}
+
+.entryList {
+  margin: 0.5rem 0 0;
+  padding-left: 1.15rem;
+  color: var(--ink-soft);
+  line-height: 1.65;
+}
+
+.entryList li {
+  margin: 0.25rem 0;
+}
+
+.stat {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--ink);
+  background: var(--accent-soft);
+  border: 1px solid var(--line);
+  padding: 0.3rem 0.7rem;
+  border-radius: 2px;
+}
+
+/* ---------- Skills ---------- */
+
+.skillGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.skillGrid li {
+  font-size: 1rem;
+  color: var(--ink-soft);
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+@media (max-width: 480px) {
+  .skillGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+  padding-top: clamp(2.25rem, 5vw, 3rem);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.footerNote {
+  font-size: 0.9rem;
+  color: var(--muted);
+  max-width: 40ch;
+}
+
+.footerLink {
+  font-size: 0.9rem;
+  color: var(--ink);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--line);
+}
+
+.footerLink:hover {
+  text-decoration-color: var(--ink);
+}
